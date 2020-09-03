@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-
+import Message from "../../Components/Message";
 import Section from "Components/Section";
 import Loader from "../../Components/Loader";
 
@@ -35,6 +35,7 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) =>
           ))}
         </Section>
       )}
+      {error && <Message color="#e74c3c" text={error} />}
     </Container>
   );
 
